@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Nova_Vida_Tecnologia___Teste_Programador_ASP.NET.Models.CsvModel>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View Employees</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorMensalidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </th>       
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.NomeAluno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorMensalidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVencimento)
+            </td>
+
+        </tr>
+    }
+
+</table>

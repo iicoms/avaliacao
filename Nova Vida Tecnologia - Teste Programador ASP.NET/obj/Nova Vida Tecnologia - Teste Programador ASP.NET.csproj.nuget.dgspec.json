@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Sistemas\\Sistemas\\DotNetCore\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET.csproj": {}
+  },
+  "projects": {
+    "C:\\Sistemas\\Sistemas\\DotNetCore\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Sistemas\\Sistemas\\DotNetCore\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET.csproj",
+        "projectName": "Nova Vida Tecnologia - Teste Programador ASP.NET",
+        "projectPath": "C:\\Sistemas\\Sistemas\\DotNetCore\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET.csproj",
+        "packagesPath": "C:\\Users\\Joey\\.nuget\\packages\\",
+        "outputPath": "C:\\Sistemas\\Sistemas\\DotNetCore\\Nova Vida Tecnologia - Teste Programador ASP.NET\\Nova Vida Tecnologia - Teste Programador ASP.NET\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Joey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

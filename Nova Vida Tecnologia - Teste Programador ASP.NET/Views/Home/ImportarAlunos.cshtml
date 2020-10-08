@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Importar Alunos";
+}
+@section styles {
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" />
+}
+
+
+<input type="hidden" id="ProfessorID" value="@ViewData["id"]" />
+<div class="text-center">
+    <h1>Importar alunos para professor (@ViewData["id"]) @ViewData["nome"]</h1>
+</div>
+
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        @if (@ViewData["bloqueado"] == "Não")
+        {
+
+            <form method="post" enctype="multipart/form-data" action="/Home/Upload">
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <p>Selecione um arquivo CSV para enviar:</p>
+                        <input type="file" name="file" />
+                        <input type="hidden" name="professorid" id="professorid" value="@ViewData["id"]" />
+                        <input type="hidden" name="nomeprofessor" id="nomeprofessor" value="@ViewData["nome"]" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <input type="submit" value="Enviar" />
+                    </div>
+                </div>
+            </form>
+        }
+        else
+        {
+            <h1 style="color: red">Professor bloqueado temporariamente de importar novos alunos. Aguarde o término do prazo.</h1>
+        }
+    </div>
+    @*
+        If upload succeeded we will show nice message to user.
+    *@
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success" style="margin-top:20px">
+            @ViewBag.Message
+        </div>
+    }
+</div>
+
+
+@section scripts {
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="~/js/home/Alunos.js"></script>
+}

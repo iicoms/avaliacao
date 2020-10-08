@@ -1,0 +1,61 @@
+﻿@model Professores
+@{
+    ViewData["Title"] = "Importar Alunos";
+}
+@section styles {
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" />
+}
+
+<div class="text-center">
+    <h1>Inclusão de Professor</h1>
+</div>
+
+@using (Html.BeginForm("GravarProfessor", "Home", FormMethod.Post))
+           {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nome, "O nome do professor é obrigatório", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+
+    </div>
+    @*
+        If upload succeeded we will show nice message to user.
+    *@
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success" style="margin-top:20px">
+            @ViewBag.Message
+        </div>
+    }
+</div>
+
+
+@section scripts {
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+}
